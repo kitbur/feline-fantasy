@@ -13,15 +13,33 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <header id="header"></header>
+    <header id="header" class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-quicksand font-bold text-gray-800">
+                <span class="text-orange-500">Feline</span> Fantasy
+            </a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#story" class="text-gray-600 hover:text-orange-500 transition font-semibold">Story</a>
+                <a href="#characters" class="text-gray-600 hover:text-orange-500 transition font-semibold">Characters</a>
+                <a href="#features" class="text-gray-600 hover:text-orange-500 transition font-semibold">Features</a>
+            </nav>
+            <a href="#preregister" class="hidden md:inline-block primary-button px-6 py-2 text-sm">Pre-register</a>
+            <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 border-t"></div>
+    </header>
+
     <main>
-        <section id="hero"></section>
-        <section id="story"></section>
-        <section id="characters"></section>
-        <section id="features"></section>
-        <section id="preregister"></section>
-    </main>
-    <footer></footer>
+        </main>
+    
+    <footer class="bg-gray-800 text-white py-8 z-10 relative">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; 2025 Feline Fantasy.</p>
+        </div>
+    </footer>
+
     <script src="js/main.js" defer></script>
 </body>
 </html>
