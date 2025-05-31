@@ -32,7 +32,27 @@
     </header>
 
     <main>
-        </main>
+        <section id="hero" class="h-screen flex flex-col items-center justify-center text-center overflow-visible">
+            <video id="hero-background-video" autoplay loop muted playsinline>
+                <source src="vid/hero.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-content container mx-auto px-6 z-10">
+                <h1 class="text-6xl md:text-8xl font-quicksand font-bold text-white mb-4 tracking-tight" style="text-shadow: 0 4px 15px rgba(0,0,0,0.4)">Feline Fantasy</h1>
+                <p class="text-lg md:text-xl text-white max-w-2xl mx-auto mb-10" style="text-shadow: 0 2px 10px rgba(0,0,0,0.5)">Collect adorable cats, design your dream home, and save the world from blandness!</p>
+                <div class="mb-10"> <a href="#characters" class="primary-button">Meet The Kitties</a>
+                </div>
+                <div class="flex justify-center items-center gap-4">
+                     <a href="#" aria-label="Download on the App Store">
+                        <img src="img/appleStorePreBadge.svg" alt="Download on the App Store" class="h-14 w-auto transition-transform duration-300 hover:scale-105">
+                     </a>
+                     <a href="#" aria-label="Get it on Google Play">
+                        <img src="img/googlePlayPreBadge.png" alt="Get it on Google Play" class="h-14 w-auto transition-transform duration-300 hover:scale-105">
+                     </a>
+                </div>
+            </div>
+        </section>
+    </main>
     
     <footer class="bg-gray-800 text-white py-8 z-10 relative">
         <div class="container mx-auto px-6 text-center text-gray-400">
