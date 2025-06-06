@@ -41,3 +41,58 @@ body {
     object-fit: cover; 
     animation: kenburns 30s infinite;
 }
+
+/* Characters */
+#characters-section-bg {
+     background-size: cover;
+     background-position: center;
+     transition: background-image 0.5s ease-in-out;
+}
+.character-section-overlay {
+    background: rgba(237, 233, 242, 0.5);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+#character-nav-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.character-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+.character-nav-item:hover {
+    background-color: rgba(255,255,255,0.7);
+}
+.character-nav-item.active {
+    background-color: white;
+    border-color: #feb47b;
+    transform: scale(1.05);
+}
+.character-nav-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 0.25rem;
+    object-fit: cover;
+}
+.character-image-container {
+    aspect-ratio: 4 / 5;
+    width: 100%;
+    max-width: 400px; /* Control max size */
+}
+.character-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.min-h-character-display {
+     min-height: 480px;
+}
