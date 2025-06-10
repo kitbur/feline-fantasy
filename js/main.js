@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('#mobile-menu a').forEach(link => {
         link.addEventListener('click', () => mobileMenu.classList.add('hidden'))
     })
-            
+
     // Character Data
     const characters = [
         { id: 1, name: 'Gigi', title: 'The Maestro', img: 'img/gigi.jpg?text=Gigi', desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae architecto quam at magni blanditiis aliquid ad sunt nihil rerum repudiandae?' },
@@ -68,4 +68,15 @@ document.addEventListener('DOMContentLoaded', function() {
     if (characters.length > 0) {
         selectCharacter(characters[0].id)
     }
+
+    // Pre-Register
+    const preregisterForm = document.getElementById('preregister-form')
+    const formMessage = document.getElementById('form-message')
+    preregisterForm.addEventListener('submit', function(e) {
+        e.preventDefault()
+        formMessage.textContent = 'Success! See you soon.'
+        formMessage.className = 'text-green-600 font-semibold mt-4'
+        preregisterForm.reset()
+        setTimeout(() => { formMessage.textContent = '' }, 5000)
+    })
 })
