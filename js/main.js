@@ -49,6 +49,18 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    const styleSheet = document.createElement("style")
+    styleSheet.innerText = `
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in { animation: fade-in 0.6s ease-out forwards; }
+    `
+    document.head.appendChild(styleSheet)
+    
+    populateCharacterNav()
+
     function populateCharacterNav() {
         navContainer.innerHTML = ''
         characters.forEach(char => {
