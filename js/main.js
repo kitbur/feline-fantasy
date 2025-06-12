@@ -10,15 +10,51 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('#mobile-menu a').forEach(link => {
         link.addEventListener('click', () => mobileMenu.classList.add('hidden'))
     })
-
+        
     // Character Data
     const characters = [
-        { id: 1, name: 'Gigi', title: 'The Maestro', img: 'img/gigi.jpg?text=Gigi', desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae architecto quam at magni blanditiis aliquid ad sunt nihil rerum repudiandae?' },
-        { id: 2, name: 'Winnie', title: 'Destroyer of Plants', img: 'img/winnie.jpg?text=Winnie', desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio illum sunt fugiat aliquid totam?' },
-        { id: 3, name: 'Pibbles', title: 'The Unseeing', img: 'img/pibbles.jpg?text=Pibbles', desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit fugiat laboriosam impedit quas optio. Rem, optio.' },
-        { id: 4, name: 'Timmy', title: 'Hunter of Rodents', img: 'img/timmy.jpg?text=Timmy', desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint molestiae ad alias.' },
-        { id: 5, name: 'Momo', title: 'Void Watcher', img: 'img/momo.jpg?text=Momo', desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dolore ullam quaerat eaque!' },
-        { id: 6, name: 'Kim', title: 'Of the Sharpest Fangs', img: 'img/kim.jpg?text=Kim', desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut praesentium beatae totam quaerat a optio expedita deleniti in?' }
+        {
+            id: 1,
+            name: 'Gigi',
+            title: 'The Maestro',
+            img: 'img/gigi.jpg?text=Gigi',
+            desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae architecto quam at magni blanditiis aliquid ad sunt nihil rerum repudiandae?'
+        },
+        {
+            id: 2,
+            name: 'Winnie',
+            title: 'Destroyer of Plants',
+            img: 'img/winnie.jpg?text=Winnie',
+            desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio illum sunt fugiat aliquid totam?'
+        },
+        {
+            id: 3,
+            name: 'Pibbles',
+            title: 'The Unseeing',
+            img: 'img/pibbles.jpg?text=Pibbles',
+            desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit fugiat laboriosam impedit quas optio. Rem, optio.'
+        },
+        {
+            id: 4,
+            name: 'Timmy',
+            title: 'Hunter of Rodents',
+            img: 'img/timmy.jpg?text=Timmy',
+            desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint molestiae ad alias.'
+        },
+        {
+            id: 5,
+            name: 'Momo',
+            title: 'Void Watcher',
+            img: 'img/momo.jpg?text=Momo',
+            desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dolore ullam quaerat eaque!'
+        },
+        {
+            id: 6,
+            name: 'Kim',
+            title: 'Of the Sharpest Fangs',
+            img: 'img/kim.jpg?text=Kim',
+            desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut praesentium beatae totam quaerat a optio expedita deleniti in?'
+        }
     ]
 
     const characterBg = document.getElementById('characters-section-bg')
@@ -49,18 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
-    const styleSheet = document.createElement("style")
-    styleSheet.innerText = `
-        @keyframes fade-in {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in { animation: fade-in 0.6s ease-out forwards; }
-    `
-    document.head.appendChild(styleSheet)
-    
-    populateCharacterNav()
-
     function populateCharacterNav() {
         navContainer.innerHTML = ''
         characters.forEach(char => {
@@ -75,12 +99,22 @@ document.addEventListener('DOMContentLoaded', function() {
             navContainer.appendChild(navItem)
         })
     }
+
+    const styleSheet = document.createElement("style")
+    styleSheet.innerText = `
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in { animation: fade-in 0.6s ease-out forwards; }
+    `
+    document.head.appendChild(styleSheet)
         
     populateCharacterNav()
     if (characters.length > 0) {
         selectCharacter(characters[0].id)
     }
-
+        
     // Pre-Register
     const preregisterForm = document.getElementById('preregister-form')
     const formMessage = document.getElementById('form-message')
