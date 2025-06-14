@@ -1,3 +1,7 @@
+/* 
+    Code by kitbur @ GitHub
+*/
+
 document.addEventListener('DOMContentLoaded', function() {
     lucide.createIcons()
 
