@@ -21,42 +21,42 @@ document.addEventListener('DOMContentLoaded', function() {
             id: 1,
             name: 'Gigi',
             title: 'The Maestro',
-            img: 'img/gigi.jpg?text=Gigi',
+            img: 'assets/img/gigi.jpg?text=Gigi',
             desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae architecto quam at magni blanditiis aliquid ad sunt nihil rerum repudiandae?'
         },
         {
             id: 2,
             name: 'Winnie',
             title: 'Destroyer of Plants',
-            img: 'img/winnie.jpg?text=Winnie',
+            img: 'assets/img/winnie.jpg?text=Winnie',
             desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio illum sunt fugiat aliquid totam?'
         },
         {
             id: 3,
             name: 'Pibbles',
             title: 'The Unseeing',
-            img: 'img/pibbles.jpg?text=Pibbles',
+            img: 'assets/img/pibbles.jpg?text=Pibbles',
             desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit fugiat laboriosam impedit quas optio. Rem, optio.'
         },
         {
             id: 4,
             name: 'Timmy',
             title: 'Hunter of Rodents',
-            img: 'img/timmy.jpg?text=Timmy',
+            img: 'assets/img/timmy.jpg?text=Timmy',
             desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint molestiae ad alias.'
         },
         {
             id: 5,
             name: 'Momo',
             title: 'Void Watcher',
-            img: 'img/momo.jpg?text=Momo',
+            img: 'assets/img/momo.jpg?text=Momo',
             desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dolore ullam quaerat eaque!'
         },
         {
             id: 6,
             name: 'Kim',
             title: 'Of the Sharpest Fangs',
-            img: 'img/kim.jpg?text=Kim',
+            img: 'assets/img/kim.jpg?text=Kim',
             desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut praesentium beatae totam quaerat a optio expedita deleniti in?'
         }
     ]
