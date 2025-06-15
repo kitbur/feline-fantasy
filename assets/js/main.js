@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
             navItem.className = 'character-nav-item'
             navItem.dataset.id = char.id
             navItem.innerHTML = `
-                <img src="${char.img}" alt="${char.name}" onerror="this.onerror=null;this.src='https://placehold.co/50x50/EDE9F2/3D3D3D?text=FF';">
+                <img src="${char.img}" alt="${char.name}">
                 <span class="font-semibold text-gray-700">${char.name}</span>
             `
             navItem.addEventListener('click', () => selectCharacter(char.id))
