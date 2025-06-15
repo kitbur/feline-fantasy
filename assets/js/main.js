@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Update Character Display
         characterBg.style.backgroundImage = `url('${char.img}')`
         displayContainer.innerHTML = `
-            <div class="animate-fade-in w-full flex flex-col md:flex-row items-center gap-8 lg:gap-12">
+            <div class="animate-fade-in w-full flex flex-col-reverse md:flex-row items-center gap-8 lg:gap-12">
                 <div class="w-full md:w-1/2 flex-shrink-0 character-image-container mx-auto">
                      <img src="${char.img}" alt="${char.name}" class="rounded-xl shadow-2xl" >
                 </div>
@@ -98,6 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const navItem = document.createElement('div')
             navItem.className = 'character-nav-item'
             navItem.dataset.id = char.id
+            navItem.title = char.name
             navItem.innerHTML = `
                 <img src="${char.img}" alt="${char.name}">
                 <span class="font-semibold text-gray-700">${char.name}</span>
