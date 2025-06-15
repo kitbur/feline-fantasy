@@ -110,6 +110,10 @@ body {
 
 /* Characters */
 
+#characters {
+    scroll-margin-top: -50px;
+}
+
 #characters-section-bg {
      background-size: cover;
      background-position: center;
