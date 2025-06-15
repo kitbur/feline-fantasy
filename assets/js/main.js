@@ -68,6 +68,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function selectCharacter(characterId) {
         const char = characters.find(c => c.id === characterId)
         if (!char) return
+
+        const currentHeight = displayContainer.offsetHeight;
+        displayContainer.style.minHeight = `${currentHeight}px`
     
         // Update Character Display
         characterBg.style.backgroundImage = `url('${char.img}')`
