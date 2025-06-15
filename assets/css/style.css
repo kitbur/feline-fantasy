@@ -123,23 +123,39 @@ body {
 }
 
 #character-nav-sidebar {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4-column grid on mobile */
-    gap: 0.5rem;
+    display: flex;
+    overflow-x: auto;
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    scrollbar-width: none;
+}
+
+#character-nav-sidebar::-webkit-scrollbar {
+    display: none;
 }
 
 .character-nav-item {
+    flex: 0 0 70px; 
+    height: 70px;
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 0.75rem;
     padding: 0.25rem;
     cursor: pointer;
     transition: all 0.3s ease;
     border: 3px solid transparent;
-    aspect-ratio: 1 / 1;
 }
 
 .character-nav-item span {
     display: none;
+}
+
+.character-nav-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
 }
 
 .character-nav-item:hover {
@@ -152,44 +168,26 @@ body {
     transform: scale(1.1);
 }
 
-.character-nav-item img {
-    width: 100%;
-    height: 100%;
-    border-radius: 0.5rem;
-    object-fit: cover;
-}
-
-.character-image-container {
-    aspect-ratio: 4 / 5;
-    width: 100%;
-    max-width: 400px;
-}
-
-.character-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.min-h-character-display {
-     min-height: 480px;
-}
-
 /* Character (Desktop) */
 
 @media (min-width: 1024px) {
     #character-nav-sidebar {
         display: flex;
         flex-direction: column;
+        overflow-x: visible;
+        -webkit-mask-image: none;
+        mask-image: none;
         gap: 0.75rem;
+        padding: 0;
     }
 
     .character-nav-item {
+        flex: 1 1 auto;
+        height: auto;
         display: flex;
         align-items: center;
         gap: 1rem;
         padding: 0.5rem;
-        aspect-ratio: auto;
     }
 
     .character-nav-item span {
